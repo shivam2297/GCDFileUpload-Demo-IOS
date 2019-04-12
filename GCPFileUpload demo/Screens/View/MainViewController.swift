@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseStorage
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,5 +19,9 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension MainViewController: MainViewDelegate {
+    
 }
 

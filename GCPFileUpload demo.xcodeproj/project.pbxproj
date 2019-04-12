@@ -8,25 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		2F11AF05FEFF23312A5ACA98 /* Pods_GCPFileUpload_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */; };
+		9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */; };
 		9D840628225F245D00F18B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840627225F245D00F18B1F /* AppDelegate.swift */; };
-		9D84062A225F245D00F18B1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840629225F245D00F18B1F /* ViewController.swift */; };
+		9D84062A225F245D00F18B1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840629225F245D00F18B1F /* MainViewController.swift */; };
 		9D84062D225F245D00F18B1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D84062B225F245D00F18B1F /* Main.storyboard */; };
 		9D84062F225F245F00F18B1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D84062E225F245F00F18B1F /* Assets.xcassets */; };
 		9D840632225F245F00F18B1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D840630225F245F00F18B1F /* LaunchScreen.storyboard */; };
 		9D84063A225F4F8500F18B1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D840639225F4F8500F18B1F /* GoogleService-Info.plist */; };
+		9D84063D225F5E5200F18B1F /* MainViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84063C225F5E5200F18B1F /* MainViewDelegate.swift */; };
+		9D840642225F5EA100F18B1F /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840641225F5EA100F18B1F /* MainViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPFileUpload_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C903AC5CD94EBCD0C9525BB /* Pods-GCPFileUpload demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPFileUpload demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCPFileUpload demo/Pods-GCPFileUpload demo.release.xcconfig"; sourceTree = "<group>"; };
+		9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCallback.swift; sourceTree = "<group>"; };
 		9D840624225F245D00F18B1F /* GCPFileUpload demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCPFileUpload demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D840627225F245D00F18B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D840629225F245D00F18B1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D840629225F245D00F18B1F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9D84062C225F245D00F18B1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D84062E225F245F00F18B1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D840631225F245F00F18B1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D840633225F245F00F18B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D840639225F4F8500F18B1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D84063C225F5E5200F18B1F /* MainViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDelegate.swift; sourceTree = "<group>"; };
+		9D840641225F5EA100F18B1F /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		F3CC40B90503ECE9EF450A3C /* Pods-GCPFileUpload demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPFileUpload demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCPFileUpload demo/Pods-GCPFileUpload demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +57,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9D6CD1C722604D81004B9AE3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		9D84061B225F245D00F18B1F = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				9D840627225F245D00F18B1F /* AppDelegate.swift */,
-				9D840629225F245D00F18B1F /* ViewController.swift */,
+				9D84063B225F5DEC00F18B1F /* Screens */,
 				9D84062B225F245D00F18B1F /* Main.storyboard */,
 				9D84062E225F245F00F18B1F /* Assets.xcassets */,
 				9D840630225F245F00F18B1F /* LaunchScreen.storyboard */,
@@ -81,6 +95,33 @@
 				9D840639225F4F8500F18B1F /* GoogleService-Info.plist */,
 			);
 			path = "GCPFileUpload demo";
+			sourceTree = "<group>";
+		};
+		9D84063B225F5DEC00F18B1F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9D6CD1C722604D81004B9AE3 /* Manager */,
+				9D840640225F5E8300F18B1F /* Presenter */,
+				9D84063F225F5E7A00F18B1F /* View */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9D84063F225F5E7A00F18B1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D840629225F245D00F18B1F /* MainViewController.swift */,
+				9D84063C225F5E5200F18B1F /* MainViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D840640225F5E8300F18B1F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D840641225F5EA100F18B1F /* MainViewPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		D76C52CB1846D3F28FD96E97 /* Frameworks */ = {
@@ -216,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D84062A225F245D00F18B1F /* ViewController.swift in Sources */,
+				9D84062A225F245D00F18B1F /* MainViewController.swift in Sources */,
 				9D840628225F245D00F18B1F /* AppDelegate.swift in Sources */,
+				9D840642225F5EA100F18B1F /* MainViewPresenter.swift in Sources */,
+				9D84063D225F5E5200F18B1F /* MainViewDelegate.swift in Sources */,
+				9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
