@@ -11,4 +11,7 @@ import Foundation
 protocol MainViewDelegate {
     func showLoader()
     func hideLoader()
+
+    func onDataSuccess(data: Data)
+    func onDataError(message: String)
 }
