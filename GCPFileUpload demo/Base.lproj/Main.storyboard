@@ -66,22 +66,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cy-p9-VaF">
-                                <rect key="frame" x="164" y="318" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cy-p9-VaF">
+                                <rect key="frame" x="164" y="318.5" width="47" height="30"/>
                                 <state key="normal" title="upload"/>
                                 <connections>
                                     <action selector="uploadBtnTapped:" destination="XyN-qJ-fbN" eventType="touchUpInside" id="WmN-BU-HIb"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ar9-wM-GBv">
+                                <rect key="frame" x="24" y="279.5" width="327" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yrE-Sr-PYS" firstAttribute="trailing" secondItem="ar9-wM-GBv" secondAttribute="trailing" constant="24" id="9Fc-43-Php"/>
+                            <constraint firstItem="5cy-p9-VaF" firstAttribute="top" secondItem="ar9-wM-GBv" secondAttribute="bottom" constant="37" id="Qk2-3a-gef"/>
+                            <constraint firstItem="5cy-p9-VaF" firstAttribute="centerY" secondItem="LAY-X6-drW" secondAttribute="centerY" id="bd2-zE-WUF"/>
+                            <constraint firstItem="ar9-wM-GBv" firstAttribute="leading" secondItem="yrE-Sr-PYS" secondAttribute="leading" constant="24" id="nPc-hV-hMx"/>
+                            <constraint firstItem="5cy-p9-VaF" firstAttribute="centerX" secondItem="LAY-X6-drW" secondAttribute="centerX" id="y34-ot-eTK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yrE-Sr-PYS"/>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="ar9-wM-GBv" id="MML-kc-9Sm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4a-Qe-DyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="464"/>
+            <point key="canvasLocation" x="544.79999999999995" y="463.71814092953525"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="Z7Z-pE-QZf">

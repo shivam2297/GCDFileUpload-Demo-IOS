@@ -9,5 +9,7 @@
 import Foundation
 
 protocol UploadViewDelegate: AnyObject {
-    func onDataSuccess()
+    func onDataSuccess(downloadUrl: String)
+    func onDataError(message: String)
+    func onProgressChanged(progress: Float)
 }
