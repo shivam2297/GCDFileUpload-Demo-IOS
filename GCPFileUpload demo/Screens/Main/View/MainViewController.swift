@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
         mainPresenter.getData()
     }
 
-    
 
 
 }

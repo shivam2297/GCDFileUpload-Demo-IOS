@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r86-Iq-HvJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kr1-MR-hWf">
+            <objects>
+                <navigationController id="r86-Iq-HvJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WFE-7o-yIW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lVU-Wl-9tm" kind="relationship" relationship="rootViewController" id="mMi-vT-EAw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVu-do-nXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1002" y="95"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="GCPFileUpload_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="GCPFileUpload_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,12 +49,80 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0h1-Xq-rV6"/>
                     <connections>
                         <outlet property="imgView" destination="hZ9-dr-5bZ" id="8c3-hh-bmB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="545" y="-237"/>
+        </scene>
+        <!--Upload View Controller-->
+        <scene sceneID="bkk-xg-BSX">
+            <objects>
+                <viewController storyboardIdentifier="UploadViewController" id="XyN-qJ-fbN" customClass="UploadViewController" customModule="GCPFileUpload_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAY-X6-drW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cy-p9-VaF">
+                                <rect key="frame" x="164" y="318" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="upload"/>
+                                <connections>
+                                    <action selector="uploadBtnTapped:" destination="XyN-qJ-fbN" eventType="touchUpInside" id="WmN-BU-HIb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yrE-Sr-PYS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4a-Qe-DyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="464"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="Z7Z-pE-QZf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T46-A8-iEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="NextViewController" id="lVU-Wl-9tm" customClass="NextViewController" customModule="GCPFileUpload_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qU3-hX-oc3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p3p-4c-4bb">
+                                <rect key="frame" x="112" y="303.5" width="151" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7B-we-K34">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="30"/>
+                                        <state key="normal" title="go to download scene"/>
+                                        <connections>
+                                            <action selector="nextBtnTapped:" destination="lVU-Wl-9tm" eventType="touchUpInside" id="3rV-1o-YfU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwr-XQ-YB7">
+                                        <rect key="frame" x="0.0" y="30" width="151" height="30"/>
+                                        <state key="normal" title="go to upload scene"/>
+                                        <connections>
+                                            <action selector="uploadSceneBtnTapped:" destination="lVU-Wl-9tm" eventType="touchUpInside" id="YPQ-3k-OLN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p3p-4c-4bb" firstAttribute="centerY" secondItem="qU3-hX-oc3" secondAttribute="centerY" id="33E-5k-roJ"/>
+                            <constraint firstItem="p3p-4c-4bb" firstAttribute="centerX" secondItem="qU3-hX-oc3" secondAttribute="centerX" id="NPh-sj-Bqv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5gx-So-QEh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XKO-dG-cp7"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-257" y="95"/>
         </scene>
     </scenes>
 </document>

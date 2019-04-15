@@ -22,13 +22,14 @@ class MainViewPresenter {
     func getData() {
         let imageRef = storage.reference(forURL: storagePath)
 
-        imageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) in
+        imageRef.getData(maxSize: 1 * 1024 * 1024) { [weak self] (data, error) in
             if let error = error {
-                self.mainView?.onDataError(message: error.localizedDescription)
+                self?.mainView?.onDataError(message: error.localizedDescription)
             } else {
-                self.mainView?.onDataSuccess(data: data!)
+                self?.mainView?.onDataSuccess(data: data!)
             }
         }
+
     }
 
 }

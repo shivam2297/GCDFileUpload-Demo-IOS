@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2F11AF05FEFF23312A5ACA98 /* Pods_GCPFileUpload_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */; };
+		9D5808F4226447F9009794F8 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808F3226447F9009794F8 /* NextViewController.swift */; };
+		9D5808F622644D68009794F8 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808F522644D68009794F8 /* UploadViewController.swift */; };
+		9D5808FB226455BB009794F8 /* UploadViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808FA226455BB009794F8 /* UploadViewDelegate.swift */; };
+		9D5808FD22645614009794F8 /* UploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808FC22645613009794F8 /* UploadPresenter.swift */; };
 		9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */; };
 		9D840628225F245D00F18B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840627225F245D00F18B1F /* AppDelegate.swift */; };
 		9D84062A225F245D00F18B1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840629225F245D00F18B1F /* MainViewController.swift */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPFileUpload_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C903AC5CD94EBCD0C9525BB /* Pods-GCPFileUpload demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPFileUpload demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCPFileUpload demo/Pods-GCPFileUpload demo.release.xcconfig"; sourceTree = "<group>"; };
+		9D5808F3226447F9009794F8 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		9D5808F522644D68009794F8 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		9D5808FA226455BB009794F8 /* UploadViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewDelegate.swift; sourceTree = "<group>"; };
+		9D5808FC22645613009794F8 /* UploadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPresenter.swift; sourceTree = "<group>"; };
 		9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCallback.swift; sourceTree = "<group>"; };
 		9D840624225F245D00F18B1F /* GCPFileUpload demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCPFileUpload demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D840627225F245D00F18B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,42 @@
 				6C903AC5CD94EBCD0C9525BB /* Pods-GCPFileUpload demo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D5808F22264475E009794F8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9D6CD1C722604D81004B9AE3 /* Manager */,
+				9D840640225F5E8300F18B1F /* Presenter */,
+				9D84063F225F5E7A00F18B1F /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9D5808F722644DD1009794F8 /* UploadScereen */ = {
+			isa = PBXGroup;
+			children = (
+				9D5808F922644DE4009794F8 /* presenter */,
+				9D5808F822644DDE009794F8 /* view */,
+			);
+			path = UploadScereen;
+			sourceTree = "<group>";
+		};
+		9D5808F822644DDE009794F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9D5808F522644D68009794F8 /* UploadViewController.swift */,
+				9D5808FA226455BB009794F8 /* UploadViewDelegate.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9D5808F922644DE4009794F8 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D5808FC22645613009794F8 /* UploadPresenter.swift */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 		9D6CD1C722604D81004B9AE3 /* Manager */ = {
@@ -100,9 +144,9 @@
 		9D84063B225F5DEC00F18B1F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				9D6CD1C722604D81004B9AE3 /* Manager */,
-				9D840640225F5E8300F18B1F /* Presenter */,
-				9D84063F225F5E7A00F18B1F /* View */,
+				9D5808F722644DD1009794F8 /* UploadScereen */,
+				9D5808F22264475E009794F8 /* Main */,
+				9D5808F3226447F9009794F8 /* NextViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -258,9 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D84062A225F245D00F18B1F /* MainViewController.swift in Sources */,
+				9D5808F622644D68009794F8 /* UploadViewController.swift in Sources */,
+				9D5808F4226447F9009794F8 /* NextViewController.swift in Sources */,
 				9D840628225F245D00F18B1F /* AppDelegate.swift in Sources */,
 				9D840642225F5EA100F18B1F /* MainViewPresenter.swift in Sources */,
 				9D84063D225F5E5200F18B1F /* MainViewDelegate.swift in Sources */,
+				9D5808FD22645614009794F8 /* UploadPresenter.swift in Sources */,
+				9D5808FB226455BB009794F8 /* UploadViewDelegate.swift in Sources */,
 				9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
