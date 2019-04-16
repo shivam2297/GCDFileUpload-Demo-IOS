@@ -12,6 +12,7 @@
 		9D5808F622644D68009794F8 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808F522644D68009794F8 /* UploadViewController.swift */; };
 		9D5808FB226455BB009794F8 /* UploadViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808FA226455BB009794F8 /* UploadViewDelegate.swift */; };
 		9D5808FD22645614009794F8 /* UploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808FC22645613009794F8 /* UploadPresenter.swift */; };
+		9D58090022649149009794F8 /* sample_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9D5808FF22648A9D009794F8 /* sample_video.mp4 */; };
 		9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */; };
 		9D840628225F245D00F18B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840627225F245D00F18B1F /* AppDelegate.swift */; };
 		9D84062A225F245D00F18B1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840629225F245D00F18B1F /* MainViewController.swift */; };
@@ -30,6 +31,7 @@
 		9D5808F522644D68009794F8 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		9D5808FA226455BB009794F8 /* UploadViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewDelegate.swift; sourceTree = "<group>"; };
 		9D5808FC22645613009794F8 /* UploadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPresenter.swift; sourceTree = "<group>"; };
+		9D5808FF22648A9D009794F8 /* sample_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_video.mp4; sourceTree = "<group>"; };
 		9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCallback.swift; sourceTree = "<group>"; };
 		9D840624225F245D00F18B1F /* GCPFileUpload demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCPFileUpload demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D840627225F245D00F18B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
+		9D5808FE22648A8E009794F8 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9D5808FF22648A9D009794F8 /* sample_video.mp4 */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		9D6CD1C722604D81004B9AE3 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 		9D840626225F245D00F18B1F /* GCPFileUpload demo */ = {
 			isa = PBXGroup;
 			children = (
+				9D5808FE22648A8E009794F8 /* data */,
 				9D840627225F245D00F18B1F /* AppDelegate.swift */,
 				9D84063B225F5DEC00F18B1F /* Screens */,
 				9D84062B225F245D00F18B1F /* Main.storyboard */,
@@ -236,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D58090022649149009794F8 /* sample_video.mp4 in Resources */,
 				9D840632225F245F00F18B1F /* LaunchScreen.storyboard in Resources */,
 				9D84062F225F245F00F18B1F /* Assets.xcassets in Resources */,
 				9D84062D225F245D00F18B1F /* Main.storyboard in Resources */,

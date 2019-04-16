@@ -76,12 +76,20 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ar9-wM-GBv">
                                 <rect key="frame" x="24" y="279.5" width="327" height="2"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start upload" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-mm-O1S">
+                                <rect key="frame" x="141" y="203" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yrE-Sr-PYS" firstAttribute="trailing" secondItem="ar9-wM-GBv" secondAttribute="trailing" constant="24" id="9Fc-43-Php"/>
+                            <constraint firstItem="ar9-wM-GBv" firstAttribute="top" secondItem="iQ7-mm-O1S" secondAttribute="bottom" constant="55.5" id="Foh-bK-lcK"/>
                             <constraint firstItem="5cy-p9-VaF" firstAttribute="top" secondItem="ar9-wM-GBv" secondAttribute="bottom" constant="37" id="Qk2-3a-gef"/>
                             <constraint firstItem="5cy-p9-VaF" firstAttribute="centerY" secondItem="LAY-X6-drW" secondAttribute="centerY" id="bd2-zE-WUF"/>
+                            <constraint firstItem="iQ7-mm-O1S" firstAttribute="centerX" secondItem="ar9-wM-GBv" secondAttribute="centerX" id="dKG-DT-KTg"/>
                             <constraint firstItem="ar9-wM-GBv" firstAttribute="leading" secondItem="yrE-Sr-PYS" secondAttribute="leading" constant="24" id="nPc-hV-hMx"/>
                             <constraint firstItem="5cy-p9-VaF" firstAttribute="centerX" secondItem="LAY-X6-drW" secondAttribute="centerX" id="y34-ot-eTK"/>
                         </constraints>
@@ -89,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="progressBar" destination="ar9-wM-GBv" id="MML-kc-9Sm"/>
+                        <outlet property="uploadProgressLbl" destination="iQ7-mm-O1S" id="kch-GX-lsX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4a-Qe-DyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,7 +107,6 @@
         <!--Next View Controller-->
         <scene sceneID="Z7Z-pE-QZf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T46-A8-iEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="NextViewController" id="lVU-Wl-9tm" customClass="NextViewController" customModule="GCPFileUpload_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qU3-hX-oc3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -133,6 +141,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XKO-dG-cp7"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T46-A8-iEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-257" y="95"/>
         </scene>
