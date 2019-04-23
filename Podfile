@@ -9,4 +9,7 @@ target 'GCPFileUpload demo' do
 	pod 'Firebase/Core'
     pod 'Firebase/Core'
     pod 'Firebase/Storage'
+    pod 'QBImagePickerController', '~> 3.4'
+    #pod 'ImagePicker'
+
 end

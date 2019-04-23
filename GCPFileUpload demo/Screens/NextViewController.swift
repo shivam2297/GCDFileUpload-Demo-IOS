@@ -10,6 +10,8 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+    var nextVC: UIViewController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,13 +19,17 @@ class NextViewController: UIViewController {
     }
     
     @IBAction func nextBtnTapped(_ sender: Any) {
-        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
-        self.navigationController?.pushViewController(mainVC!, animated: true)
+        nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
+        self.navigationController?.pushViewController(nextVC!, animated: true)
     }
     
     @IBAction func uploadSceneBtnTapped(_ sender: Any) {
-        let uploadVC = self.storyboard?.instantiateViewController(withIdentifier: "UploadViewController")
-        self.navigationController?.pushViewController(uploadVC!, animated: true)
+        nextVC = self.storyboard?.instantiateViewController(withIdentifier: "UploadViewController")
+        self.navigationController?.pushViewController(nextVC!, animated: true)
     }
 
+    @IBAction func multiUploadScenebtnTapped(_ sender: Any) {
+        nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MultiUploadViewController")
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    }
 }

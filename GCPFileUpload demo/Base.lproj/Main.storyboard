@@ -104,6 +104,45 @@
             </objects>
             <point key="canvasLocation" x="544.79999999999995" y="463.71814092953525"/>
         </scene>
+        <!--Multi Upload View Controller-->
+        <scene sceneID="eqx-eK-Hak">
+            <objects>
+                <viewController storyboardIdentifier="MultiUploadViewController" id="hw4-bP-olZ" customClass="MultiUploadViewController" customModule="GCPFileUpload_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gxc-7t-Euf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qkF-dp-jz5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VVS-bL-x3m" firstAttribute="bottom" secondItem="qkF-dp-jz5" secondAttribute="bottom" id="Jqv-K1-9kT"/>
+                            <constraint firstItem="qkF-dp-jz5" firstAttribute="leading" secondItem="VVS-bL-x3m" secondAttribute="leading" id="PcE-G2-cme"/>
+                            <constraint firstItem="qkF-dp-jz5" firstAttribute="top" secondItem="VVS-bL-x3m" secondAttribute="top" id="tKE-k6-MPd"/>
+                            <constraint firstItem="VVS-bL-x3m" firstAttribute="trailing" secondItem="qkF-dp-jz5" secondAttribute="trailing" id="tmW-ts-xwo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VVS-bL-x3m"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fKh-hN-cL5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="6gx-aC-SC1">
+                            <connections>
+                                <action selector="addBtnTapped:" destination="hw4-bP-olZ" id="Mwe-rw-NLK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="uploadingContentTableView" destination="qkF-dp-jz5" id="k77-uz-Izy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WW2-Qf-CNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="1119"/>
+        </scene>
         <!--Next View Controller-->
         <scene sceneID="Z7Z-pE-QZf">
             <objects>
@@ -113,20 +152,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p3p-4c-4bb">
-                                <rect key="frame" x="112" y="303.5" width="151" height="60"/>
+                                <rect key="frame" x="103" y="288.5" width="169" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7B-we-K34">
-                                        <rect key="frame" x="0.0" y="0.0" width="151" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="30"/>
                                         <state key="normal" title="go to download scene"/>
                                         <connections>
                                             <action selector="nextBtnTapped:" destination="lVU-Wl-9tm" eventType="touchUpInside" id="3rV-1o-YfU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwr-XQ-YB7">
-                                        <rect key="frame" x="0.0" y="30" width="151" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="169" height="30"/>
                                         <state key="normal" title="go to upload scene"/>
                                         <connections>
                                             <action selector="uploadSceneBtnTapped:" destination="lVU-Wl-9tm" eventType="touchUpInside" id="YPQ-3k-OLN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4e-wB-LPA">
+                                        <rect key="frame" x="0.0" y="60" width="169" height="30"/>
+                                        <state key="normal" title="go to multi upload scene"/>
+                                        <connections>
+                                            <action selector="multiUploadScenebtnTapped:" destination="lVU-Wl-9tm" eventType="touchUpInside" id="DK5-zC-3ae"/>
                                         </connections>
                                     </button>
                                 </subviews>

@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2F11AF05FEFF23312A5ACA98 /* Pods_GCPFileUpload_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */; };
+		9D339A16226DA28700120269 /* MultiUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D339A15226DA28700120269 /* MultiUploadViewController.swift */; };
+		9D339A1A226DA2B900120269 /* MultiUploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D339A19226DA2B900120269 /* MultiUploadPresenter.swift */; };
+		9D339A1C226DA2DB00120269 /* MultiUploadViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D339A1B226DA2DB00120269 /* MultiUploadViewDelegate.swift */; };
+		9D339A1E226DD50000120269 /* UploadContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D339A1D226DD50000120269 /* UploadContentTableViewCell.swift */; };
+		9D339A20226DD52900120269 /* UploadContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D339A1F226DD52900120269 /* UploadContentTableViewCell.xib */; };
 		9D5808F4226447F9009794F8 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808F3226447F9009794F8 /* NextViewController.swift */; };
 		9D5808F622644D68009794F8 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808F522644D68009794F8 /* UploadViewController.swift */; };
 		9D5808FB226455BB009794F8 /* UploadViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808FA226455BB009794F8 /* UploadViewDelegate.swift */; };
 		9D5808FD22645614009794F8 /* UploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5808FC22645613009794F8 /* UploadPresenter.swift */; };
 		9D58090022649149009794F8 /* sample_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9D5808FF22648A9D009794F8 /* sample_video.mp4 */; };
+		9D5809052265D597009794F8 /* sample_video_2.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 9D5809042265D597009794F8 /* sample_video_2.MOV */; };
 		9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */; };
 		9D840628225F245D00F18B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840627225F245D00F18B1F /* AppDelegate.swift */; };
 		9D84062A225F245D00F18B1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D840629225F245D00F18B1F /* MainViewController.swift */; };
@@ -27,11 +33,17 @@
 /* Begin PBXFileReference section */
 		042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPFileUpload_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C903AC5CD94EBCD0C9525BB /* Pods-GCPFileUpload demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPFileUpload demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCPFileUpload demo/Pods-GCPFileUpload demo.release.xcconfig"; sourceTree = "<group>"; };
+		9D339A15226DA28700120269 /* MultiUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiUploadViewController.swift; sourceTree = "<group>"; };
+		9D339A19226DA2B900120269 /* MultiUploadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiUploadPresenter.swift; sourceTree = "<group>"; };
+		9D339A1B226DA2DB00120269 /* MultiUploadViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiUploadViewDelegate.swift; sourceTree = "<group>"; };
+		9D339A1D226DD50000120269 /* UploadContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadContentTableViewCell.swift; sourceTree = "<group>"; };
+		9D339A1F226DD52900120269 /* UploadContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadContentTableViewCell.xib; sourceTree = "<group>"; };
 		9D5808F3226447F9009794F8 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		9D5808F522644D68009794F8 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		9D5808FA226455BB009794F8 /* UploadViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewDelegate.swift; sourceTree = "<group>"; };
 		9D5808FC22645613009794F8 /* UploadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPresenter.swift; sourceTree = "<group>"; };
 		9D5808FF22648A9D009794F8 /* sample_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_video.mp4; sourceTree = "<group>"; };
+		9D5809042265D597009794F8 /* sample_video_2.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample_video_2.MOV; sourceTree = "<group>"; };
 		9D6CD1C822604D99004B9AE3 /* ResponseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCallback.swift; sourceTree = "<group>"; };
 		9D840624225F245D00F18B1F /* GCPFileUpload demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCPFileUpload demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D840627225F245D00F18B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +79,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9D339A14226DA25C00120269 /* MultiUploadScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9D339A18226DA2A300120269 /* presenter */,
+				9D339A17226DA29700120269 /* view */,
+			);
+			path = MultiUploadScreen;
+			sourceTree = "<group>";
+		};
+		9D339A17226DA29700120269 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9D339A15226DA28700120269 /* MultiUploadViewController.swift */,
+				9D339A1B226DA2DB00120269 /* MultiUploadViewDelegate.swift */,
+				9D339A1D226DD50000120269 /* UploadContentTableViewCell.swift */,
+				9D339A1F226DD52900120269 /* UploadContentTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9D339A18226DA2A300120269 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D339A19226DA2B900120269 /* MultiUploadPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
 		9D5808F22264475E009794F8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,13 +117,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		9D5808F722644DD1009794F8 /* UploadScereen */ = {
+		9D5808F722644DD1009794F8 /* UploadScreen */ = {
 			isa = PBXGroup;
 			children = (
 				9D5808F922644DE4009794F8 /* presenter */,
 				9D5808F822644DDE009794F8 /* view */,
 			);
-			path = UploadScereen;
+			path = UploadScreen;
 			sourceTree = "<group>";
 		};
 		9D5808F822644DDE009794F8 /* view */ = {
@@ -106,6 +146,7 @@
 		9D5808FE22648A8E009794F8 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				9D5809042265D597009794F8 /* sample_video_2.MOV */,
 				9D5808FF22648A9D009794F8 /* sample_video.mp4 */,
 			);
 			path = data;
@@ -155,7 +196,8 @@
 		9D84063B225F5DEC00F18B1F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				9D5808F722644DD1009794F8 /* UploadScereen */,
+				9D339A14226DA25C00120269 /* MultiUploadScreen */,
+				9D5808F722644DD1009794F8 /* UploadScreen */,
 				9D5808F22264475E009794F8 /* Main */,
 				9D5808F3226447F9009794F8 /* NextViewController.swift */,
 			);
@@ -221,6 +263,11 @@
 				TargetAttributes = {
 					9D840623225F245D00F18B1F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -248,9 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D58090022649149009794F8 /* sample_video.mp4 in Resources */,
+				9D339A20226DD52900120269 /* UploadContentTableViewCell.xib in Resources */,
 				9D840632225F245F00F18B1F /* LaunchScreen.storyboard in Resources */,
 				9D84062F225F245F00F18B1F /* Assets.xcassets in Resources */,
 				9D84062D225F245D00F18B1F /* Main.storyboard in Resources */,
+				9D5809052265D597009794F8 /* sample_video_2.MOV in Resources */,
 				9D84063A225F4F8500F18B1F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +318,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GCPFileUpload demo/Pods-GCPFileUpload demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -277,6 +327,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +372,11 @@
 				9D84063D225F5E5200F18B1F /* MainViewDelegate.swift in Sources */,
 				9D5808FD22645614009794F8 /* UploadPresenter.swift in Sources */,
 				9D5808FB226455BB009794F8 /* UploadViewDelegate.swift in Sources */,
+				9D339A1E226DD50000120269 /* UploadContentTableViewCell.swift in Sources */,
 				9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */,
+				9D339A16226DA28700120269 /* MultiUploadViewController.swift in Sources */,
+				9D339A1C226DA2DB00120269 /* MultiUploadViewDelegate.swift in Sources */,
+				9D339A1A226DA2B900120269 /* MultiUploadPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
