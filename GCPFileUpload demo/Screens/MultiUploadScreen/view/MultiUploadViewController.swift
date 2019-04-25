@@ -20,6 +20,10 @@ class MultiUploadViewController: UIViewController {
 
     private var uploadContents = [UploadContent]()
 
+    private var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskIdentifier(rawValue: 0)
+
+    private let queue = DispatchQueue(label: "Upload_Task_Background")
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,8 +56,8 @@ extension MultiUploadViewController: MultiUploadViewDelegate {
     }
 
     func onProgressChanged(progress: Float, fileId: String) {
-//        progressBar.progress = progress / 100
-//        uploadProgressLbl.text = "uploading: \((100 * progress).rounded()/100)%"
+        //        progressBar.progress = progress / 100
+        //        uploadProgressLbl.text = "uploading: \((100 * progress).rounded()/100)%"
 
         let content = uploadContents.filter({return $0.fileId == fileId}).first
         content?.progress = progress
@@ -92,32 +96,48 @@ extension MultiUploadViewController: MultiUploadViewDelegate {
 }
 
 extension MultiUploadViewController: QBImagePickerControllerDelegate {
+
     func qb_imagePickerControllerDidCancel(_ imagePickerController: QBImagePickerController!) {
         imagePickerController.dismiss(animated: true, completion: nil)
     }
+
+
     func qb_imagePickerController(_ imagePickerController: QBImagePickerController!, didFinishPickingAssets assets: [Any]!) {
         imagePickerController.dismiss(animated: true, completion: nil)
 
         if assets.count > 0 {
-            for i in 0..<assets.count {
-                let asset = assets[i] as! PHAsset
+            //starting background task...
 
-                asset.requestContentEditingInput(with: PHContentEditingInputRequestOptions()) { [weak self] (contentEditingInput, dictInfo) in
-                    if let strURL = contentEditingInput?.fullSizeImageURL
-                    {
-                        print("image url: \(strURL)")
-                        self?.uploadContents.append(UploadContent(path: strURL.absoluteString, progress: 0, fileId: strURL.absoluteString))
-                        self?.uploadingContentTableView.reloadData()
-                        if let data = try? Data(contentsOf: strURL) {
-                            self?.presenter.uploadData(data: data, fileId: strURL.absoluteString)
+            self.backgroundTask =  UIApplication.shared.beginBackgroundTask(expirationHandler: {
+                UIApplication.shared.endBackgroundTask((self.backgroundTask))
+                self.backgroundTask = UIBackgroundTaskIdentifier.invalid
+            })
+
+            queue.async {
+                for i in 0..<assets.count {
+                    let asset = assets[i] as! PHAsset
+
+                    asset.requestContentEditingInput(with: PHContentEditingInputRequestOptions()) { [weak self] (contentEditingInput, dictInfo) in
+                        if let strURL = contentEditingInput?.fullSizeImageURL
+                        {
+                            print("image url: \(strURL)")
+                            self?.uploadContents.append(UploadContent(path: strURL.absoluteString, progress: 0, fileId: strURL.lastPathComponent))
+                            self?.uploadingContentTableView.reloadData()
+                            if let data = try? Data(contentsOf: strURL) {
+                                let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (timer) in
+                                    self?.presenter.uploadData(data: data, fileId: strURL.lastPathComponent)
+                                })
+                                timer.fire()
+                            }
                         }
                     }
                 }
+                UIApplication.shared.endBackgroundTask(self.backgroundTask)
+                self.backgroundTask = UIBackgroundTaskIdentifier.invalid
             }
         }
     }
 }
-
 extension MultiUploadViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {

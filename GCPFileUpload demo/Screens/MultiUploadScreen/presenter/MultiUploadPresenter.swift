@@ -24,7 +24,7 @@ class MultiUploadPresenter {
     func uploadData(data: Data, fileId: String) {
 
         //creating refrence for an image file
-        let fileRef = storageRef.child("images/" + randomString() + ".jpeg")
+        let fileRef = storageRef.child("images/" + "_" + randomString() + "_" + fileId)
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
 
