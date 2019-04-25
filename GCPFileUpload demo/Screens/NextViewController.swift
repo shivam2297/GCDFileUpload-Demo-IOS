@@ -32,4 +32,8 @@ class NextViewController: UIViewController {
         nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MultiUploadViewController")
         self.navigationController?.pushViewController(nextVC!, animated: true)
     }
+    @IBAction func schedulerSceneBtnTapped(_ sender: Any) {
+        nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TaskSchedulerViewController")
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
 }

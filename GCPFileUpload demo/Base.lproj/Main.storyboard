@@ -143,6 +143,21 @@
             </objects>
             <point key="canvasLocation" x="545" y="1119"/>
         </scene>
+        <!--Task Scheduler View Controller-->
+        <scene sceneID="aGQ-db-IXL">
+            <objects>
+                <viewController storyboardIdentifier="TaskSchedulerViewController" id="dU2-H0-MgV" customClass="TaskSchedulerViewController" customModule="GCPFileUpload_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="whg-WH-fQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aCb-9k-vZY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2b-GI-ELp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="1785"/>
+        </scene>
         <!--Next View Controller-->
         <scene sceneID="Z7Z-pE-QZf">
             <objects>
@@ -152,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p3p-4c-4bb">
-                                <rect key="frame" x="103" y="288.5" width="169" height="90"/>
+                                <rect key="frame" x="103" y="273.5" width="169" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7B-we-K34">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="30"/>
@@ -173,6 +188,13 @@
                                         <state key="normal" title="go to multi upload scene"/>
                                         <connections>
                                             <action selector="multiUploadScenebtnTapped:" destination="lVU-Wl-9tm" eventType="touchUpInside" id="DK5-zC-3ae"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQ9-4Y-Qh3">
+                                        <rect key="frame" x="0.0" y="90" width="169" height="30"/>
+                                        <state key="normal" title="go to scheduler scene"/>
+                                        <connections>
+                                            <action selector="schedulerSceneBtnTapped:" destination="lVU-Wl-9tm" eventType="touchUpInside" id="mu9-zm-UEV"/>
                                         </connections>
                                     </button>
                                 </subviews>

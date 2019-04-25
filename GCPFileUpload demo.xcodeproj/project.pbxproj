@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2F11AF05FEFF23312A5ACA98 /* Pods_GCPFileUpload_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */; };
+		9D21E68A22718543005C446A /* TaskSchedulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D21E68922718543005C446A /* TaskSchedulerViewController.swift */; };
+		9D21E68E22718598005C446A /* TaskSchedulerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D21E68D22718598005C446A /* TaskSchedulerPresenter.swift */; };
+		9D21E690227185DA005C446A /* TaskSchedulerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D21E68F227185DA005C446A /* TaskSchedulerViewDelegate.swift */; };
 		9D339A16226DA28700120269 /* MultiUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D339A15226DA28700120269 /* MultiUploadViewController.swift */; };
 		9D339A1A226DA2B900120269 /* MultiUploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D339A19226DA2B900120269 /* MultiUploadPresenter.swift */; };
 		9D339A1C226DA2DB00120269 /* MultiUploadViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D339A1B226DA2DB00120269 /* MultiUploadViewDelegate.swift */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		042E0E17DD9F0A08081914B2 /* Pods_GCPFileUpload_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPFileUpload_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C903AC5CD94EBCD0C9525BB /* Pods-GCPFileUpload demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPFileUpload demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCPFileUpload demo/Pods-GCPFileUpload demo.release.xcconfig"; sourceTree = "<group>"; };
+		9D21E68922718543005C446A /* TaskSchedulerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSchedulerViewController.swift; sourceTree = "<group>"; };
+		9D21E68D22718598005C446A /* TaskSchedulerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSchedulerPresenter.swift; sourceTree = "<group>"; };
+		9D21E68F227185DA005C446A /* TaskSchedulerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSchedulerViewDelegate.swift; sourceTree = "<group>"; };
 		9D339A15226DA28700120269 /* MultiUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiUploadViewController.swift; sourceTree = "<group>"; };
 		9D339A19226DA2B900120269 /* MultiUploadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiUploadPresenter.swift; sourceTree = "<group>"; };
 		9D339A1B226DA2DB00120269 /* MultiUploadViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiUploadViewDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +83,32 @@
 				6C903AC5CD94EBCD0C9525BB /* Pods-GCPFileUpload demo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D21E6882271850E005C446A /* SchedulerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9D21E68C2271857D005C446A /* presenter */,
+				9D21E68B22718572005C446A /* view */,
+			);
+			path = SchedulerScreen;
+			sourceTree = "<group>";
+		};
+		9D21E68B22718572005C446A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9D21E68922718543005C446A /* TaskSchedulerViewController.swift */,
+				9D21E68F227185DA005C446A /* TaskSchedulerViewDelegate.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9D21E68C2271857D005C446A /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D21E68D22718598005C446A /* TaskSchedulerPresenter.swift */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 		9D339A14226DA25C00120269 /* MultiUploadScreen */ = {
@@ -196,6 +228,7 @@
 		9D84063B225F5DEC00F18B1F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9D21E6882271850E005C446A /* SchedulerScreen */,
 				9D339A14226DA25C00120269 /* MultiUploadScreen */,
 				9D5808F722644DD1009794F8 /* UploadScreen */,
 				9D5808F22264475E009794F8 /* Main */,
@@ -364,7 +397,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D21E68E22718598005C446A /* TaskSchedulerPresenter.swift in Sources */,
 				9D84062A225F245D00F18B1F /* MainViewController.swift in Sources */,
+				9D21E690227185DA005C446A /* TaskSchedulerViewDelegate.swift in Sources */,
 				9D5808F622644D68009794F8 /* UploadViewController.swift in Sources */,
 				9D5808F4226447F9009794F8 /* NextViewController.swift in Sources */,
 				9D840628225F245D00F18B1F /* AppDelegate.swift in Sources */,
@@ -375,6 +410,7 @@
 				9D339A1E226DD50000120269 /* UploadContentTableViewCell.swift in Sources */,
 				9D6CD1C922604D99004B9AE3 /* ResponseCallback.swift in Sources */,
 				9D339A16226DA28700120269 /* MultiUploadViewController.swift in Sources */,
+				9D21E68A22718543005C446A /* TaskSchedulerViewController.swift in Sources */,
 				9D339A1C226DA2DB00120269 /* MultiUploadViewDelegate.swift in Sources */,
 				9D339A1A226DA2B900120269 /* MultiUploadPresenter.swift in Sources */,
 			);
